@@ -1,0 +1,45 @@
+"""Simple Calculator Project"""
+def add(num1,num2):
+    return num1 + num2
+def mutiply(num1,num2):
+    return num1 * num2
+def minus(num1,num2):
+    return num1 - num2
+def division(num1,num2):
+    return num1 / num2
+def moduloDiv(num1, num2):
+    return num1 % num2
+while True:
+   operator = input("Choose a operator +,-,/,*:")
+   num1 = float(input("Enter a number:"))
+   num2 = float(input("Enter another number:"))
+   if operator == "+":
+      print("The result is " + str(add(num1,num2)))
+      ask = input("Do you still want to use it again: (yes/no)")
+      if ask == "no":
+          break
+      else:
+          continue
+   elif operator == "*":
+      print("The result is " + str(mutiply(num1,num2)))
+      ask = input("Do you still want to use it again: (yes/no)")
+      if ask == "no":
+         break
+      else:
+          continue
+   elif operator == "/":
+       try:
+          print("The result is " + str(division(num1,num2)))
+       except ZeroDivisionError:
+           print("You cannot divide with zero")
+           ask = input("Do you still want to use it again:(yes/no)")
+       if ask == "no":
+           break
+       else:
+          continue
+   elif operator == "-":
+      print("The result is " + str(minus(num1,num2)))
+      break
+   else:
+     print("Please enter a correct operation:")
+     continue
